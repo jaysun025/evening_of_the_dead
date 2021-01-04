@@ -49,7 +49,7 @@ start.onclick = function() {
 }
  
 
-
+// Restart the Game
 restartGameButton.addEventListener('click', restartGame);
 
 function restartGame() {
@@ -59,7 +59,7 @@ function restartGame() {
 }
 
 
-
+// Empty build for characters
 function Crawler(x, y, img, width, height) {
     this.x = x
     this.y = y
@@ -72,6 +72,8 @@ function Crawler(x, y, img, width, height) {
         ctx.drawImage(this.img, this.x, this.y)
     }
 }
+
+//Characters that fill screen
 
 let survivor = new Crawler(600, 570, survivorImg, 40, 50);
 let zomboy = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboImg, 40, 50);
@@ -92,12 +94,12 @@ let zomboyFourteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zombo
 let zomboyFifteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboThreeImg, 40, 50);
 let zomboySixteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboTwoImg, 40, 50);
 
-
+// Zombies appear at random
 function randomX() {
     return Math.floor(Math.random() * 1150 + 1);
 }
 
-
+// Zombies move down the game board at different speeds
 function zomboyMove(zomboy){
     if (zomboy !== null) {
         zomboy.y +=9;
@@ -140,7 +142,7 @@ function zomboyMove(zomboy){
     } 
 }
 
-
+// Zombies and survivor appear on screen and move
 let gameLoop = () => {
     ctx.clearRect(0, 0, game.width, game.height)
     if (survivor.alive) {
@@ -168,9 +170,6 @@ let gameLoop = () => {
     zomboySixteen.render();
    
 
-
-
-    
     zomboyMove(zomboy);
     zomboyMove(zomboyOne); 
     zomboyMove(zomboyTwo); 
@@ -191,9 +190,7 @@ let gameLoop = () => {
        
 }
 
-
-
-
+// How PC moves around
 let movementHandler= e => {
     switch(e.key) {
     case 'a':
@@ -207,8 +204,9 @@ let movementHandler= e => {
     }
     break   
     }
-        }
+}
 
+    // Requirments to kill survivor as well as end results
     let deadSurvivor = () => {
     if(zomboy.x + zomboy.width > survivor.x &&
         zomboy.x < survivor.x + survivor.width &&
@@ -332,6 +330,7 @@ let movementHandler= e => {
     }
     }
     
+    // How zombies reset at top of screen at different positions
 function resetPosition(zomboy){
     zomboy.y = 0- zomboy.height;
     zomboy.x = randomX();
@@ -359,7 +358,7 @@ function restart() {
     gameInterval = setInterval (gameLoop, stop())     
 }
 
-
+// Button to start and restart. Setting gameloop. Listening for keypresses
 let stop = () => clearInterval(gameInterval);
 let gameInterval = setInterval(gameLoop, 60);
 clearInterval(gameInterval, gameLoop);

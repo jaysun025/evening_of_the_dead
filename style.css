@@ -9,10 +9,12 @@ header, footer {
     text-align: center;
     color: crimson;
 }
+
 header {
     font-family: 'Hanalei Fill';
     font-size: 50px;
 }
+
 footer {
     font-size: 20px;
     font-family: 'Langar';
