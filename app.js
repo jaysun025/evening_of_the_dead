@@ -1,8 +1,4 @@
 
-// Timer won't restart 
-
-
-
 //SELECTORS
 let gameBoard = document.getElementById('game');
 let ctx = gameBoard.getContext('2d');
@@ -41,8 +37,6 @@ gameBoard.setAttribute('height', getComputedStyle(game)['height'])
 // FUNCTIONS
 
 // Timer
-
-
 function pad ( val ) { return val > 9 ? val : "0" + val; }
 let sec = 0;
 start.onclick = function() {
@@ -89,20 +83,21 @@ let zomboyTwo = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboImg, 
 let zomboyThree = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboTwoImg, 40, 50);
 let zomboyFour = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboImg, 40, 50);
 let zomboyFive = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboTwoImg, 40, 50);
-let zomboySix = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboTwoImg, 40, 50);
+let zomboySix = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboFourImg, 40, 50);
 let zomboySeven = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboImg, 40, 50);
 let zomboyEight = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboTwoImg, 40, 50);
-let zomboyNine = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboImg, 40, 50);
+let zomboyNine = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboThreeImg, 40, 50);
 let zomboyTen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboTwoImg, 40, 50);
 let zomboyEleven = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboThreeImg, 40, 50);
 let zomboyTwelve = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboFourImg, 40, 50);
 let zomboyThirteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboThreeImg, 40, 50);
 let zomboyFourteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboFourImg, 40, 50);
 let zomboyFifteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboThreeImg, 40, 50);
+let zomboySixteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboTwoImg, 40, 50);
 
 
 function randomX() {
-    return Math.floor(Math.random() * 1200 + 1);
+    return Math.floor(Math.random() * 1150 + 1);
 }
 
 
@@ -116,13 +111,13 @@ function zomboyMove(zomboy){
     }if (zomboyOne !== null) {
         zomboyOne.y +=.2;
     } if (zomboyTwo !== null) {
-        zomboyTwo.y +=.3;
+        zomboyTwo.y +=.1;
     } if (zomboyThree !== null) {
         zomboyThree.y +=.3;
     } if (zomboyFour !== null) {
         zomboyFour.y +=.2;
     } if (zomboyFive !== null) {
-        zomboyFive.y +=.2;
+        zomboyFive.y +=.3;
     } if (zomboySix !== null) {
         zomboySix.y +=.3;
     } if (zomboySeven !== null) {
@@ -136,13 +131,15 @@ function zomboyMove(zomboy){
     } if (zomboyEleven !== null) {
         zomboyEleven.y +=.3;
     } if (zomboyTwelve !== null) {
-        zomboyTwelve.y +=.3;
+        zomboyTwelve.y +=.2;
     } if (zomboyThirteen !== null) {
         zomboyThirteen.y +=.1;
     } if (zomboyFourteen !== null) {
         zomboyFourteen.y +=.2;
     } if (zomboyFifteen !== null) {
-        zomboyFifteen.y +=.3;
+        zomboyFifteen.y +=.1;
+    } if (zomboySixteen !== null) {
+        zomboySixteen.y +=.1;
     } 
 }
 
@@ -171,6 +168,10 @@ let gameLoop = () => {
     zomboyThirteen.render();
     zomboyFourteen.render();
     zomboyFifteen.render();
+    zomboySixteen.render();
+   
+
+
 
     
     zomboyMove(zomboy);
@@ -188,7 +189,9 @@ let gameLoop = () => {
     zomboyMove(zomboyTwelve); 
     zomboyMove(zomboyThirteen); 
     zomboyMove(zomboyFourteen); 
-    zomboyMove(zomboyFifteen); 
+    zomboyMove(zomboyFifteen);
+    zomboyMove(zomboySixteen);
+       
 }
 
 
@@ -306,11 +309,15 @@ let movementHandler= e => {
         zomboyFifteen.y + zomboyFifteen.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+    }if(zomboySixteen.x + zomboySixteen.width > survivor.x &&
+        zomboySixteen.x < survivor.x + survivor.width &&
+        zomboySixteen.y < survivor.y + survivor.height &&
+        zomboySixteen.y + zomboySixteen.height > survivor.y) {
+            audio.play()
+            survivor.alive = false;
     }
-}
-
-
-
+    }
+    
 function resetPosition(zomboy){
     zomboy.y = 0- zomboy.height;
     zomboy.x = randomX();
@@ -333,6 +340,7 @@ function restart() {
     resetPosition(zomboyThirteen)
     resetPosition(zomboyFourteen)
     resetPosition(zomboyFifteen)
+    resetPosition(zomboySixteen)
     survivor.alive = true;
     gameInterval = setInterval (gameLoop, stop())     
 }
@@ -352,4 +360,3 @@ startBtn.addEventListener('click', restart)
         
 
 
-        
