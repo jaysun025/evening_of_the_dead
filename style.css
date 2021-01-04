@@ -1,0 +1,35 @@
+ html, body {
+     margin: 0;
+     padding: 0;
+     background-color: black;
+ }
+ 
+ 
+header, footer {
+    text-align: center;
+    
+}
+header {
+    color: crimson;
+    font-family: 'Hanalei Fill';
+    font-size: 50px;
+}
+footer {
+    color: crimson;
+    font-size: 20px;
+    font-family: 'Langar';
+}
+    
+#game{
+    border: 5px solid black;
+    width: 100vw;
+    height: 75vh;
+    background-image: url('RaccoonCity.jpg');
+    background-position-x: center;
+    }
+
+
+
+
+
+
