@@ -94,15 +94,15 @@ let zomboySeven = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboImg
 let zomboyEight = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboTwoImg, 40, 50);
 let zomboyNine = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboImg, 40, 50);
 let zomboyTen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboTwoImg, 40, 50);
-let zomboyEleven = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboThreeImg, 5, 10);
-let zomboyTwelve = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboFourImg, 5, 10);
-let zomboyThirteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboThreeImg, 5, 10);
-let zomboyFourteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboFourImg, 5, 10);
-let zomboyFifteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboThreeImg, 5, 10);
+let zomboyEleven = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboThreeImg, 40, 50);
+let zomboyTwelve = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboFourImg, 40, 50);
+let zomboyThirteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboThreeImg, 40, 50);
+let zomboyFourteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboFourImg, 40, 50);
+let zomboyFifteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboThreeImg, 40, 50);
 
 
 function randomX() {
-    return Math.floor(Math.random() * 1000 + 1);
+    return Math.floor(Math.random() * 1200 + 1);
 }
 
 
