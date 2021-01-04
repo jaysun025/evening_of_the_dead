@@ -60,9 +60,6 @@ function restartGame() {
 
 
 
-
-
-
 function Crawler(x, y, img, width, height) {
     this.x = x
     this.y = y
@@ -219,102 +216,119 @@ let movementHandler= e => {
         zomboy.y + zomboy.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     } if(zomboyOne.x + zomboyOne.width > survivor.x &&
         zomboyOne.x < survivor.x + survivor.width &&
         zomboyOne.y < survivor.y + survivor.height &&
         zomboyOne.y + zomboyOne.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     } if(zomboyTwo.x + zomboyTwo.width > survivor.x &&
         zomboyTwo.x < survivor.x + survivor.width &&
         zomboyTwo.y < survivor.y + survivor.height &&
         zomboyTwo.y + zomboyTwo.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     }if(zomboyThree.x + zomboyThree.width > survivor.x &&
         zomboyThree.x < survivor.x + survivor.width &&
         zomboyThree.y < survivor.y + survivor.height &&
         zomboyThree.y + zomboyThree.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     }if(zomboyFour.x + zomboyFour.width > survivor.x &&
         zomboyFour.x < survivor.x + survivor.width &&
         zomboyFour.y < survivor.y + survivor.height &&
         zomboyFour.y + zomboyFour.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     }if(zomboyFive.x + zomboyFive.width > survivor.x &&
         zomboyFive.x < survivor.x + survivor.width &&
         zomboyFive.y < survivor.y + survivor.height &&
         zomboyFive.y + zomboyFive.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     }if(zomboySix.x + zomboySix.width > survivor.x &&
         zomboySix.x < survivor.x + survivor.width &&
         zomboySix.y < survivor.y + survivor.height &&
         zomboySix.y + zomboySix.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     }if(zomboySeven.x + zomboySeven.width > survivor.x &&
         zomboySeven.x < survivor.x + survivor.width &&
         zomboySeven.y < survivor.y + survivor.height &&
         zomboySeven.y + zomboySeven.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     }if(zomboyEight.x + zomboyEight.width > survivor.x &&
         zomboyEight.x < survivor.x + survivor.width &&
         zomboyEight.y < survivor.y + survivor.height &&
         zomboyEight.y + zomboyEight.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     }if(zomboyNine.x + zomboyNine.width > survivor.x &&
         zomboyNine.x < survivor.x + survivor.width &&
         zomboyNine.y < survivor.y + survivor.height &&
         zomboyNine.y + zomboyNine.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     }if(zomboyTen.x + zomboyTen.width > survivor.x &&
         zomboyTen.x < survivor.x + survivor.width &&
         zomboyTen.y < survivor.y + survivor.height &&
         zomboyTen.y + zomboyTen.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     }if(zomboyEleven.x + zomboyEleven.width > survivor.x &&
         zomboyEleven.x < survivor.x + survivor.width &&
         zomboyEleven.y < survivor.y + survivor.height &&
         zomboyEleven.y + zomboyEleven.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     }if(zomboyTwelve.x + zomboyTwelve.width > survivor.x &&
         zomboyTwelve.x < survivor.x + survivor.width &&
         zomboyTwelve.y < survivor.y + survivor.height &&
         zomboyTwelve.y + zomboyTwelve.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     }if(zomboyThirteen.x + zomboyThirteen.width > survivor.x &&
         zomboyThirteen.x < survivor.x + survivor.width &&
         zomboyThirteen.y < survivor.y + survivor.height &&
         zomboyThirteen.y + zomboyThirteen.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     }if(zomboyFourteen.x + zomboyFourteen.width > survivor.x &&
         zomboyFourteen.x < survivor.x + survivor.width &&
         zomboyFourteen.y < survivor.y + survivor.height &&
         zomboyFourteen.y + zomboyFourteen.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     }if(zomboyFifteen.x + zomboyFifteen.width > survivor.x &&
         zomboyFifteen.x < survivor.x + survivor.width &&
         zomboyFifteen.y < survivor.y + survivor.height &&
         zomboyFifteen.y + zomboyFifteen.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     }if(zomboySixteen.x + zomboySixteen.width > survivor.x &&
         zomboySixteen.x < survivor.x + survivor.width &&
         zomboySixteen.y < survivor.y + survivor.height &&
         zomboySixteen.y + zomboySixteen.height > survivor.y) {
             audio.play()
             survivor.alive = false;
+            alert('GAME OVER')
     }
     }
     

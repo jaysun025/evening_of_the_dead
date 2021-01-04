@@ -7,15 +7,13 @@
  
 header, footer {
     text-align: center;
-    
+    color: crimson;
 }
 header {
-    color: crimson;
     font-family: 'Hanalei Fill';
     font-size: 50px;
 }
 footer {
-    color: crimson;
     font-size: 20px;
     font-family: 'Langar';
 }
