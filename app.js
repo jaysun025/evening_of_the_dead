@@ -4,22 +4,27 @@ let gameBoard = document.getElementById('game');
 let ctx = gameBoard.getContext('2d');
 let = startBtn = document.getElementById('start');
 const restartGameButton = document.getElementById('restart')
+
 // Zomboy
 let zomboImg = new Image();
 zomboImg.src = 'Creations/Zomboy.png';
 let zomboThreeImg = new Image();
 zomboThreeImg.src = 'Creations/Zomboy2.png'
+
 //Zomgirl
 let zomboTwoImg = new Image();
 zomboTwoImg.src = 'Creations/Zomgirl.png';
 let zomboFourImg = new Image();
 zomboFourImg.src = 'Creations/Zomgirl2.png'
+
 //Survivor
 let survivorImg = new Image();
 survivorImg.src = 'Creations/Umbrella Employ.png';
+
 // Zombie eating
 let audio = document.createElement('audio');
 audio.src ='Creations/Zomoku.mp3'
+
 // Timer
 let minute = 0;
 let second = 0;
@@ -94,7 +99,7 @@ let zomboyFourteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zombo
 let zomboyFifteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboThreeImg, 40, 50);
 let zomboySixteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboTwoImg, 40, 50);
 
-// Zombies appear at random
+// Zombies appear at random along x axies
 function randomX() {
     return Math.floor(Math.random() * 1150 + 1);
 }
