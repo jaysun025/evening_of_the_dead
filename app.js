@@ -7,23 +7,23 @@ const restartGameButton = document.getElementById('restart')
 
 // Zomboy
 let zomboImg = new Image();
-zomboImg.src = 'Creations/Zomboy.png';
+zomboImg.src = './Creations/Zomboy.png';
 let zomboThreeImg = new Image();
-zomboThreeImg.src = 'Creations/Zomboy2.png'
+zomboThreeImg.src = './Creations/Zomboy2.png'
 
 //Zomgirl
 let zomboTwoImg = new Image();
-zomboTwoImg.src = 'Creations/Zomgirl.png';
+zomboTwoImg.src = './Creations/Zomgirl.png';
 let zomboFourImg = new Image();
-zomboFourImg.src = 'Creations/Zomgirl2.png'
+zomboFourImg.src = './Creations/Zomgirl2.png'
 
 //Survivor
 let survivorImg = new Image();
-survivorImg.src = 'Creations/Umbrella.png';
+survivorImg.src = './Creations/Umbrella.png';
 
 // Zombie eating
 let audio = document.createElement('audio');
-audio.src ='Creations/Zomoku.mp3'
+audio.src ='./Creations/Zomoku.mp3'
 
 // Timer
 let minute = 0;
