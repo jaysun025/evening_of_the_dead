@@ -19,7 +19,7 @@ zomboFourImg.src = 'Creations/Zomgirl2.png'
 
 //Survivor
 let survivorImg = new Image();
-survivorImg.src = 'Creations/Umbrella_employ.png';
+survivorImg.src = 'Creations/Umbrella.png';
 
 // Zombie eating
 let audio = document.createElement('audio');
