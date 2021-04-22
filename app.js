@@ -107,43 +107,43 @@ function randomX() {
 // Zombies move down the game board at different speeds
 function zomboyMove(zomboy){
     if (zomboy !== null) {
-        zomboy.y +=9;
+        zomboy.y +=2;
         if (zomboy.y > gameBoard.height) {
             zomboy.y = 0-zomboy.height;
             zomboy.x = randomX();
         }
     }if (zomboyOne !== null) {
-        zomboyOne.y +=.2;
+        zomboyOne.y +=.02;
     } if (zomboyTwo !== null) {
-        zomboyTwo.y +=.1;
+        zomboyTwo.y +=.01;
     } if (zomboyThree !== null) {
-        zomboyThree.y +=.3;
+        zomboyThree.y +=.03;
     } if (zomboyFour !== null) {
-        zomboyFour.y +=.2;
+        zomboyFour.y +=.02;
     } if (zomboyFive !== null) {
-        zomboyFive.y +=.3;
+        zomboyFive.y +=.03;
     } if (zomboySix !== null) {
-        zomboySix.y +=.3;
+        zomboySix.y +=.03;
     } if (zomboySeven !== null) {
-        zomboySeven.y +=.2;
+        zomboySeven.y +=.02;
     } if (zomboyEight !== null) {
-        zomboyEight.y +=.1;
+        zomboyEight.y +=.01;
     } if (zomboyNine !== null) {
-        zomboyNine.y +=.1;
+        zomboyNine.y +=.01;
     } if (zomboyTen !== null) {
-        zomboyTen.y +=.2;
+        zomboyTen.y +=.02;
     } if (zomboyEleven !== null) {
-        zomboyEleven.y +=.3;
+        zomboyEleven.y +=.03;
     } if (zomboyTwelve !== null) {
-        zomboyTwelve.y +=.2;
+        zomboyTwelve.y +=.02;
     } if (zomboyThirteen !== null) {
-        zomboyThirteen.y +=.1;
+        zomboyThirteen.y +=.01;
     } if (zomboyFourteen !== null) {
-        zomboyFourteen.y +=.2;
+        zomboyFourteen.y +=.02;
     } if (zomboyFifteen !== null) {
-        zomboyFifteen.y +=.1;
+        zomboyFifteen.y +=.01;
     } if (zomboySixteen !== null) {
-        zomboySixteen.y +=.1;
+        zomboySixteen.y +=.01;
     } 
 }
 
