@@ -101,7 +101,7 @@ let zomboySixteen = new Crawler(Math.floor(Math.random() * 1000 + 1), -1, zomboT
 
 // Zombies appear at random along x axies
 function randomX() {
-    return Math.floor(Math.random() * 1150 + 1);
+    return Math.floor(Math.random() * 1680 + 1);
 }
 
 // Zombies move down the game board at different speeds
